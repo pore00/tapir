@@ -1,52 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>それ自体が絵画のような</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<link rel="stylesheet" type="text/css" href="../../../../css/reset.css" media="screen">
-<link rel="stylesheet" type="text/css" href="../../../../css/design84.css" media="screen">
-<link rel="stylesheet" type="text/css" href="../../../../css/prince_of_tennis/long_yukimura.css" media="screen">
-<link rel="icon" type="image/png" href="../../../../img/design84_favicon.png">
-</head>
-<body>
-  <nav id="navs" class="navs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>それ自体が絵画のような</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../../css/reset.css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../../css/design84.css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../../css/prince_of_tennis/long_yukimura.css"
+      media="screen"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../../../../img/design84_favicon.png"
+    />
+  </head>
+  <body>
+    <nav id="navs" class="navs">
+      <!-- 「MENU」ボタン（スマホのみ表示） -->
+      <div class="navTrigger" id="navTrigger"></div>
 
-    <!-- 「MENU」ボタン（スマホのみ表示） -->
-    <div class="navTrigger" id="navTrigger"></div>
-
-    <div class="navWrap">
+      <div class="navWrap">
         <!-- メインナビ（ページ外リンク） -->
         <ul class="mainNav">
-            <li><a href="../../../../index.html">index</a></li>
-            <li><a href="../../../../contents.html">contents</a></li>
+          <li><a href="../../../../index.html">index</a></li>
+          <li><a href="../../../../contents.html">contents</a></li>
         </ul>
 
         <ul id="sideNav" class="sideNav">
-            <!-- <li><a href="#link_attention">attention</a></li>
+          <!-- <li><a href="#link_attention">attention</a></li>
             <li><a href="#link_cat1">Prince of Tennis</a></li>
             <li><a href="#link_cat2">Dead Account</a></li> -->
-            <!-- <li><a href="#link_cat3">Other</a></li> -->
+          <!-- <li><a href="#link_cat3">Other</a></li> -->
         </ul>
-    </div><!-- /navWrap -->
-</nav>
+      </div>
+      <!-- /navWrap -->
 
-  <main class="wrapper">
-    <div class="flower"></div>
+      <style>
+        /* 保存ボタン */
+        #namechange-settings button[type="submit"] {
+          background-color: #e8edee;
+          color: #314657;
+          border: 1px solid #314657;
+          padding: 4px 10px;
+          margin: 10px 0 0 62px;
+          cursor: pointer;
+          font-family: inherit;
+        }
 
-    <h1 class="novel-title">わたしのかみさま。/幸村精市</h1>
+        /* 閉じるボタン */
+        #namechange-close {
+          background-color: transparent;
+          color: #314657;
+          border: 1px solid #314657;
+          padding: 4px 10px;
+          cursor: pointer;
+          font-family: inherit;
+        }
 
-    <p class="namechange">
-      <a href="#" class="namechange-link">名前変換</a>
-    </p>
+        /* マウスを乗せたとき */
+        #namechange-settings button:hover {
+          opacity: 0.7;
+        }
+      </style>
+    </nav>
 
-    <ul class="page-list">
-      <li>
-        <!-- <a href="01.html"> -->
+    <main class="wrapper">
+      <div class="flower"></div>
+
+      <h1 class="novel-title">わたしのかみさま。/幸村精市</h1>
+
+      <p class="namechange">
+        <a href="#" class="namechange-link" id="namechange-link"> 名前変換 </a>
+      </p>
+
+      <!-- 名前変換フォーム -->
+      <div id="namechange-form" hidden>
+        <form id="namechange-settings">
+          <p>
+            <label for="surname">名字</label>
+            <input type="text" id="surname" name="surname" placeholder="名字" />
+          </p>
+
+          <p>
+            <label for="firstname">名前</label>
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              placeholder="名前"
+            />
+          </p>
+
+          <button type="submit">input</button>
+          <button type="button" id="namechange-close">close</button>
+        </form>
+      </div>
+
+      <ul class="page-list">
+        <li>
+          <!-- <a href="01.html"> -->
           <span>01</span> 出逢わなければよかったね
-      </li>
-      <!-- <li>
+        </li>
+        <!-- <li>
         <a href="#">
           <span>02</span> ダミータイトル
         </a>
@@ -61,9 +134,10 @@
           <span>04</span> ダミータイトル
         </a>
       </li> -->
-    </ul>
-  </main>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="../../../../js/design84_script.js"></script>
-</body>
+      </ul>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../../../../js/design84_script.js"></script>
+    <script src="../../../../js/namechange.js"></script>
+  </body>
 </html>
