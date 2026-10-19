@@ -58,6 +58,61 @@
       #sideNav::before {
         content: none;
       }
+
+/* スマホ向けレスポンシブ */
+@media screen and (max-width: 768px) {
+
+  /* ページ全体 */
+  body.dream-background {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* 小説本文 */
+  .dream-text {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 24px 20px;
+    font-size: 1rem;
+    line-height: 2;
+    overflow-wrap: break-word;
+  }
+
+  /* 小説タイトル */
+  .dream-title {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 24px 0;
+    padding: 0 20px;
+    font-size: 2rem;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+    overflow-wrap: break-word;
+  }
+
+}
+
+/* 小さめのスマホ向け */
+@media screen and (max-width: 480px) {
+
+  .dream-text {
+    padding-right: 18px;
+    padding-left: 18px;
+    font-size: 0.95rem;
+    line-height: 2;
+  }
+
+  .dream-title {
+    padding-right: 18px;
+    padding-left: 18px;
+    font-size: 1.7rem;
+  }
+
+}
+
     </style>
   </head>
   <body class="dream-background">
