@@ -627,4 +627,14 @@ h4 + .shortList {
     .mainFooter {
         margin: 50px auto;
     }
+    }
+    @media screen and (max-width: 768px) {
+        .list.space {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .list.space li {
+            width: 100%;
+        }
 }
